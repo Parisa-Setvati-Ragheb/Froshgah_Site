@@ -1,11 +1,12 @@
 import Header from "../Component/Pages/Header/Header";
-import Footer from "../Component/Pages/Footer/Footer"
+
+import FooterPage from "../Component/Pages/Footer/FooterPage";
 const Layout = ({children}) => {
     return (
         <>
         <Header/>
         {children}
-        <Footer/>
+        <FooterPage/>
 
         </>
       );

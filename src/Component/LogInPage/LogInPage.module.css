@@ -1,0 +1,13 @@
+.formcontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 3rem; */
+    /* width: 100%; */
+}
+
+.link{
+    color: black !important;
+    text-align: center;
+}

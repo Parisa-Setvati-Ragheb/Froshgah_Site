@@ -8,3 +8,8 @@ body{
   background-color:#f3f4f6;
 
 }
+input:focus{
+  outline: none !important;
+ 
+  border:2px solid #496da0 !important;
+}
