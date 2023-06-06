@@ -2,6 +2,7 @@
 import { useCart,useCartAction } from "../../Provider/Provider";
 import styles from "./Cart.module.css";
 import { NavLink } from "react-router-dom";
+
 import * as Data from "../../../Data/Data";
 const Cart = () => {
   const { cart,total } = useCart();
@@ -73,7 +74,7 @@ const CartSummary=({total,cart})=> {
     <h6>Total:</h6>
     <span>{total}$</span>
   </div>
-  <NavLink to="/checkout" >
+  <NavLink to="/signup?redirect=/checkout" >
     <button className={styles.btncheckout}> go to CheckOut</button></NavLink>
 </section>
 

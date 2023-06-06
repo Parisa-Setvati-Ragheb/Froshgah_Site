@@ -3,7 +3,7 @@
     max-width: 1170px; */
     display: flex;
     justify-content: space-between;
-    padding: .5rem 1rem ;
+    padding: .5rem 1 ;
     
 }
 .nav ul{

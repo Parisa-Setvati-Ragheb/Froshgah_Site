@@ -20,6 +20,7 @@ const Navigation = () => {
             <li key={item.to}>
               <NavLink
                 className={(navData) =>
+                  // console.log(navData)
                   navData.isActive ? styles.activelink : " "
                 }
                 // exact={item.exact || false}
@@ -41,6 +42,7 @@ const Navigation = () => {
         <li>
           <NavLink
             className={(navData) =>
+           
               navData.isActive ? styles.activelink : " "
             }
             to={userInformation ? "/profile" : "/login"}

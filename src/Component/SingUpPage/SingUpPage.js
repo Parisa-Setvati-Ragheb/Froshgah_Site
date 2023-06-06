@@ -1,11 +1,12 @@
 import Input from "../../../src/common/Input";
 import { Formik, FormikConsumer, useFormik, yupToFormErrors } from "formik";
-import { NavLink ,useNavigate} from "react-router-dom";
+import { NavLink ,redirect,useNavigate} from "react-router-dom";
 import styles from "./SingUpPage.module.css";
 import * as Yup from "yup";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { singupUser } from "../../services/signupSrvice";
-import { useAuthActions } from "../Provider/AuthProvider";
+import { useAuth, useAuthActions } from "../Provider/AuthProvider";
+import { useQuery } from "../Pages/hooks/UseQuery";
 const initialValues = {
   name: "",
   email: "",
@@ -37,7 +38,12 @@ const validationSchema = Yup.object({
 const SingUpPage = () => {
   const [error, setError] = useState(null);
   const setAuth=useAuthActions();
+  const auth= useAuth();
   const navigate=useNavigate();
+  const query=useQuery();
+  const redirect=query.get('redirect') || "/";
+  console.log(redirect);
+  useEffect(()=>{ if (auth) navigate(redirect)},[redirect,auth]);
   const onSubmit = async (values) => {
     const { name, email, phoneNumber, password } = values;
     const userData = {
@@ -50,7 +56,7 @@ const SingUpPage = () => {
       const { data } = await singupUser(userData);
       console.log(data);
        setError(null);
-       navigate("/");
+       navigate(redirect);
        setAuth(data);
 localStorage.setItem('authState',JSON.stringify(data));
       
@@ -105,7 +111,7 @@ localStorage.setItem('authState',JSON.stringify(data));
          {error && <p>{error}</p>} 
       </form>
       <div>
-        <NavLink to="/login" className={styles.link}>
+        <NavLink to={`/login?redirect=${redirect}`} className={styles.link}>
           <span>are you rejester?</span>
         </NavLink>
       </div>
