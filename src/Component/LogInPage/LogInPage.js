@@ -58,8 +58,8 @@ localStorage.setItem('authState',JSON.stringify(data));
   });
 
   return (
-    <div>
-      <h2>LogIn</h2>
+    <div className={styles.container}>
+      <h3 className={styles.titr}>LogIn</h3>
       <form onSubmit={formik.handleSubmit}>
         <div className={styles.formcontainer}>
           <Input name="email" formik={formik} label="Email" />
@@ -70,7 +70,7 @@ localStorage.setItem('authState',JSON.stringify(data));
         </div>
 
         <div className={styles.formcontainer}>
-          <button type="submit" disabled={!formik.isValid}>
+          <button type="submit" disabled={!formik.isValid} className={styles.btn}>
             LogIn
           </button>
           {error && <p>{error}</p>}

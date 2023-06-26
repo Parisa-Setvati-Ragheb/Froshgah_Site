@@ -1,6 +1,7 @@
+import styles from "./Check.module.css"
 const Check = () => {
   return (
-    <section>
+    <section className={styles.container}>
       <h4>this is checkout page!</h4>
       <div>
         <spa>Product List</spa>

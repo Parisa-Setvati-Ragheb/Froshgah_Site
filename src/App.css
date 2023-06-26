@@ -2,14 +2,20 @@
   margin: 0;
   padding: 0;
   border-style: none;
+  /* overflow-x: hidden; */
+  
   
 }
 body{
-  background-color:#f3f4f6;
+  background-color:#f5f3ff;
+  overflow-x: hidden;
 
 }
 input:focus{
   outline: none !important;
  
   border:2px solid #496da0 !important;
+}
+li{
+  list-style-type: none;
 }

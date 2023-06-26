@@ -77,7 +77,7 @@ localStorage.setItem('authState',JSON.stringify(data));
   });
 
   return (
-    <div>
+    <div className={styles.container}>
       <h2>LogIn</h2>
       <form onSubmit={formik.handleSubmit}>
         <div className={styles.formcontainer}>

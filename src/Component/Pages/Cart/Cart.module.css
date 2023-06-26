@@ -1,53 +1,86 @@
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width:1200px) {
+    .cart{
+       
+       width: 600px !important;
+     
+
+    
+} 
+}
+@media only screen and (max-width:900px) {
     .originContainer{
         display: flex;
         flex-direction: column !important;
-   align-items: center !important;}
+   align-items: center !important;
+   margin: 0 2rem !important;
+}
         .cart{
             display: flex;
             flex-direction: column !important;
-            width: 400px !important;
+           width: 400px !important;
          
 
         
 }
 .listItem{   margin: 20px auto !important;}
-/* .btn{   margin: 20px auto !important;} */
+.summary{
+    margin-left: 0 !important;
+    margin-bottom: 2rem !important;
+}
+}
+
+@media only screen and (max-width:500px) {
+
+    .cart{
+        width: 220px !important;
+    }
+
+}
+.main{
+
+    display: flex;
+   
+    flex: 1;
+    min-height: 100vh;
+    color:#7c3aed;
+   
 }
 .originContainer{
     display: flex;
     flex-direction: row;
+  
     margin: 10px 15px;
     /* align-items: center; */
     justify-content: center;
 
-    margin-top: 30px;
+    
+    margin: 3rem auto;
 }
 .container{
    
     display: flex;
     flex-direction: column;
-    border: 1px solid #1f2937;
-    background-color:#1f2937;
+    border: 1px solid #5b21b6;
+    background-color:#ede9fe;
     border-radius: 5px;
     margin-top: 30px;
     /* height: 30%vh; */
-   
-
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .cartItem{
     margin: 1.5rem;
+    color: #5b21b6;
 }
 
 .cart{
     display: flex;
     justify-content: space-between;
     align-items: center;
-  color: #fff;
+  /* color: #8b5cf6; */
     padding: 15px;
     width: 600px;
     max-width: 1070px;
-    border-bottom: 1px solid  #afa7a7;
+    border-bottom: 1px solid  #5b21b6;
 
 
 }
@@ -56,59 +89,88 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 350px;
+    /* width: 350px; */
+   
+ /* margin-right: 1rem; */
+}
+.information{
+    font-weight: bold;
+    padding: 0 1.5rem;
+}
+.information_titr{
+    padding-right: .2rem;
 }
 .summaryItem{
     display: flex;
     align-items: center;
+  
     justify-content: space-between;
     padding: 1.5rem 1.5rem 0 1.5rem;
+    /* color:#8b5cf6; */
 }
 .btn button{
     margin: 10px;
     border-radius: 5px;
     width: 25px;
     height: 25px;
+    background-color: #8b5cf6;
+    color: #ede9fe;
 
 }
 .summary{
     display: flex;
     flex-direction: column;
-    border: 1px solid #afa7a7;
+    border: 1px solid #5b21b6;
     border-radius: 5px;
-    background-color: #1f2937;
-    color: #FFF;
+    background-color: #ede9fe;
+    color: #5b21b6;;
     width: 300px;
     /* height:300px; */
     padding-bottom: 2rem;
     margin-left: 2rem;
 margin-top: 2rem;
-
+box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
-.summary h3{
+.summary h5{
     margin-bottom: 2rem;
+    text-align: center;
+    margin-top: .9rem;
 }
 
 .discount{
-    border-bottom: 1px solid #e7e7e7;
+    border-bottom: 1px solid #5b21b6;
 margin: 1rem 1.5rem 0 1.5rem;
 padding-bottom: .5rem;
 }
 .btncheckout{
-    background-color: #e5e7eb;
+    background-color:#7c3aed;
     width: 100%;
     height: 25px;
     border-radius: 5px;
     margin: 30px auto;
-    border:2px solid #e5e7eb;
+    /* border:2px solid #5b21b6; */
 cursor: pointer;
 transition:.5s;
-
+color:#ede9fe;
+box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 .btncheckout:hover{
-    background-color:#1f2937 !important;
-    color: #e5e7eb;
-    border:2px solid #e5e7eb;
+    background-color:#5b21b6 !important;
+    color: #ede9fe;
+    /* border:2px solid #e5e7eb; */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
     
 
+}
+.imagecontainer{
+    width: 80px;
+    height: 60px;
+    border-radius: 5px 5px 0 0px;
+    margin-right: 2rem;
+}
+.images{
+    width:100%;
+    height:100%;
+    border-radius: 5px ;
 }

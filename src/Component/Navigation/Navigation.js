@@ -2,16 +2,18 @@ import { NavLink } from "react-router-dom";
 import { useCart } from "../Provider/Provider";
 import styles from "./Navigation.module.css";
 import { useAuth } from "../Provider/AuthProvider";
+import { BsFillCartCheckFill } from "react-icons/bs";
 
 const item = [
-  { name: "home", to: "/" },
+  { name: "home", to: "/Home" },
   { name: "about", to: "/About" },
-  { name: "cart", to: "/Cart" },
+  { name: "contact", to: "/Contact" },
+  // { name: "cart", to: "/Cart" },
 ];
 
 const Navigation = () => {
   const { cart } = useCart();
-  const userInformation=useAuth();
+  const userInformation = useAuth();
   return (
     <nav className={styles.nav}>
       <ul>
@@ -38,18 +40,25 @@ const Navigation = () => {
           );
         })}
       </ul>
-      <ul>
+      <ul className={styles.nav}>
+      <li>    <NavLink  className={(navData) =>
+                  // console.log(navData)
+                  navData.isActive ? styles.activelink : " "
+                } to="/Cart">
+            <BsFillCartCheckFill className={styles.icon} />
+            <span className={styles.cartItem}>{cart.length}</span>
+          </NavLink>
+        </li>
         <li>
           <NavLink
             className={(navData) =>
-           
               navData.isActive ? styles.activelink : " "
             }
             to={userInformation ? "/profile" : "/login"}
           >
-           {userInformation ?"Profile" :"login/signup"} 
-          </NavLink>
-        </li>
+            {userInformation ? "Profile" : "login/signup"}
+          </NavLink></li>
+     
       </ul>
     </nav>
   );

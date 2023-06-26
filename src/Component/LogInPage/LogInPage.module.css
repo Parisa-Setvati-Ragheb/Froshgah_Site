@@ -1,3 +1,9 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    min-height: 100vh;
+}
 .formcontainer{
     display: flex;
     flex-direction: column;
@@ -6,8 +12,28 @@
     /* margin-top: 3rem; */
     /* width: 100%; */
 }
+.titr{
+    margin-top: 2rem;
 
+}
 .link{
     color: black !important;
     text-align: center;
+    margin-top: 2rem;
+    
+}
+.btn{
+    background-color: #8b5cf6;
+    color:#f5f3ff;
+    width: 150px;
+    /* height: px; */
+    border-radius: 3px;
+    margin:3.5rem auto;
+    padding: .5rem .3rem;
+    /* border:1px solid #7c3aed; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+cursor: pointer;
+transition:.5s;
+font-size: 9pt;
 }

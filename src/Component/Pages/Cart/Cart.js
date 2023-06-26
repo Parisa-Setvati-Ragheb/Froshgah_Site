@@ -17,7 +17,7 @@ const Cart = () => {
   })
   if (!cart.length)
     return (
-      <main>
+      <main className={styles.main}>
         <h3>No Item</h3>
       </main>
     );
@@ -29,10 +29,16 @@ const Cart = () => {
         {cart.map((item) => (
         <div className={styles.cartItem}>
  <div key={item.id} className={styles.cart}>
+ <div className={styles.imagecontainer}>   <img className={styles.images} src={item.image}></img>
+
+</div>
             <div className={styles.listItem}>
-            <p>{item.name}</p>
-            <p>{item.Size}</p>
-            <p>{item.offPrice * item.quantity}</p>
+            <span className={styles.information}><span className={styles.information_titr}>Name:</span> {item.name}</span>
+           
+            {/* <p>{item.Size}</p> */}
+            
+            <span className={styles.information}><span className={styles.information_titr}>Price:</span>{item.offPrice * item.quantity}$</span>
+            
             </div>
             <div className={styles.btn}>
             <button  onClick={()=>{ IncHandler(item)}}>+</button>
@@ -57,7 +63,7 @@ const CartSummary=({total,cart})=> {
   
  return(
   <section className={styles.summary}>
-  <h3 >CartSummary</h3>
+  <h5 >CartSummary</h5>
   <div className={styles.summaryItem}>
     <h6>OrginalTotalPrice:</h6>
     <span>{OrginalTotalPrice}$</span>
