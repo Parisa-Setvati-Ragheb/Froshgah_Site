@@ -31,7 +31,7 @@ const Home = () => {
   }, []);
   return (
     <>
-      <h3>Product List</h3>
+      <h3 className={styles.titr}>Product List</h3>
       <section className={styles.sec}>
         {datas ? (
           datas.map((product) => {
